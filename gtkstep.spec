@@ -14,7 +14,6 @@ BuildRequires:	gtk+-devel >= 1.1.6
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
 
 %description
 A NEXTSTEP(tm) theme for GTK. It emulates the look and feel of the
