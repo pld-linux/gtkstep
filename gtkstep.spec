@@ -29,7 +29,7 @@ NEXTSTEP(tm).
 %build
 export LDFLAGS="-s"
 %configure
-make
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
