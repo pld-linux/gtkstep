@@ -6,13 +6,19 @@ Release:	2
 License:	GPL
 Group:		X11/Libraries
 Group(de):	X11/Libraries
+Group(es):	X11/Bibliotecas
+Group(fr):	X11/Librairies
 Group(pl):	X11/Biblioteki
+Group(pt_BR):	X11/Bibliotecas
+Group(ru):	X11/Библиотеки
+Group(uk):	X11/Б╕бл╕отеки
 Source0:	http://ulli.linuxave.net/gtkstep/%{name}-%{version}.tar.bz2
 Icon:		gtkstep.xpm
 URL:		http://ulli.linuxave.net/gtkstep/
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	gtk+-devel >= 1.1.6
 BuildRequires:	libtool
-BuildRequires:	autoconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -29,9 +35,11 @@ NEXTSTEP(tm).
 %setup -q
 
 %build
+rm -f missing
 libtoolize --copy --force
 aclocal
 autoconf
+automake -a -c
 %configure
 %{__make}
 
