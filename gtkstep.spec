@@ -1,7 +1,7 @@
 Summary:	A NEXTSTEP(tm) theme for GTK.
 Summary(pl):	Temat NEXTSTEP(tm) dla GTK.
 Name:		gtkstep
-Version:	1.7
+Version:	1.8
 Release:	1
 Copyright:	GPL
 Group:          X11/Libraries
