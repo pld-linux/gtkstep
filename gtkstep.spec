@@ -5,13 +5,6 @@ Version:	2.2
 Release:	2
 License:	GPL
 Group:		X11/Libraries
-Group(de):	X11/Libraries
-Group(es):	X11/Bibliotecas
-Group(fr):	X11/Librairies
-Group(pl):	X11/Biblioteki
-Group(pt_BR):	X11/Bibliotecas
-Group(ru):	X11/Библиотеки
-Group(uk):	X11/Б╕бл╕отеки
 Source0:	http://ulli.linuxave.net/gtkstep/%{name}-%{version}.tar.bz2
 Icon:		gtkstep.xpm
 URL:		http://ulli.linuxave.net/gtkstep/
