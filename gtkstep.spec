@@ -1,16 +1,17 @@
 Summary:	A NEXTSTEP(tm) theme for GTK.
 Summary(pl):	Temat NEXTSTEP(tm) dla GTK.
 Name:		gtkstep
-Version:	1.10
+Version:	2.0
 Release:	1
-Copyright:	GPL
-Group:          X11/Libraries
+License:	GPL
+Group:		X11/Libraries
 Group(pl):	X11/Biblioteki
-Source:		http://members.linuxstart.com/~ulli/gtkstep/%{name}-%{version}.tar.bz2
-Icon:           gtkstep.xpm
+Source0:	http://ulli.linuxave.net/gtkstep/%{name}-%{version}.tar.bz2
+Icon:		gtkstep.xpm
+URL:		http://ulli.linuxave.net/gtkstep/
 BuildRequires:	gtk+-devel >= 1.1.6
 BuildRequires:	glib-devel >= 1.1.6
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n) -u -n)
 
 %define		_prefix		/usr/X11R6
 
@@ -19,6 +20,7 @@ A NEXTSTEP(tm) theme for GTK. It emulates the look and feel of the
 NEXTSTEP(tm) GUI.
 
 %description -l pl
+
 Temat NEXTSTEP(tm) dla GTK. Emuluje wygl±d graficznego interfejsu
 NEXTSTEP(tm).
 
