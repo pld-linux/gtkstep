@@ -8,8 +8,8 @@ Group:          X11/Libraries
 Group(pl):	X11/Biblioteki
 Source:		ftp://sunshine.informatik.uni-wuerzburg.de/pub/wmaker/gtkstep/%{name}-%{version}.tar.bz2
 Icon:           gtkstep.xpm
-BuildPrereq:	gtk+-devel >= 1.1.6
-BuildPrereq:	glib-devel >= 1.1.6
+BuildRequires:	gtk+-devel >= 1.1.6
+BuildRequires:	glib-devel >= 1.1.6
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %define _prefix	/usr/X11R6
