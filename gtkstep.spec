@@ -10,7 +10,7 @@ Source:		http://members.linuxstart.com/~ulli/gtkstep/%{name}-%{version}.tar.bz2
 Icon:           gtkstep.xpm
 BuildRequires:	gtk+-devel >= 1.1.6
 BuildRequires:	glib-devel >= 1.1.6
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 
