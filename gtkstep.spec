@@ -37,22 +37,3 @@ rm -rf $RPM_BUILD_ROOT
 %attr(-,root,root) /usr/share/themes/Step/README.html
 %attr(-,root,root) /usr/share/themes/Step/gtk/gtkrc
 %doc AUTHORS COPYING ChangeLog NEWS README
-
-%changelog
-
-* Wed Mar 17 1999 Ullrich Hafner <hafner@bigfoot.de>
-
-- update to GTKstep 1.5
-
-* Tue Feb 16 1999 Oliver Graf <ograf@fga.de>
-
-- fixed prefix handling for configure and make install
-- Updated to GTKstep 1.4.
-
-* Tue Feb 2 1999 Tom Palmer <tmp1@dcs.qmw.ac.uk>
-
-- Updated to GTKstep 1.3.
-
-* Thu Jan 28 1999 Tom Palmer <tmp1@dcs.qmw.ac.uk>
-
-- First go at an RPM file.
