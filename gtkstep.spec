@@ -1,39 +1,52 @@
-%define ver	1.5
 Summary:	A NEXTSTEP(tm) theme for GTK.
+Summary(pl):	Temat NEXTSTEP(tm) dla GTK.
 Name:		gtkstep
-Version:	%{ver}
+Version:	1.6
 Release:	1
 Copyright:	GPL
-Source:		ftp://sunshine.informatik.uni-wuerzburg.de/pub/wmaker/gtkstep/gtkstep-%{ver}.tar.gz
-BuildRoot:	/tmp/gtkstep-%{PACKAGE_VERSION}-root
-Group:		X11/Libraries
-Packager:	Ullrich Hafner <hafner@bigfoot.de>
-Requires:	gtk+ >= 1.1.15
-Icon:		gtkstep.xpm
+Group:          X11/Libraries
+Group(pl):	X11/Biblioteki
+Source:		ftp://sunshine.informatik.uni-wuerzburg.de/pub/wmaker/gtkstep/%{name}-%{version}.tar.bz2
+Icon:           gtkstep.xpm
+BuildPrereq:	gtk+-devel >= 1.1.6
+BuildPrereq:	glib-devel >= 1.1.6
+BuildRoot:	/tmp/%{name}-%{version}-root
+
+%define _prefix	/usr/X11R6
 
 %description
 A NEXTSTEP(tm) theme for GTK. It emulates the look and feel of the
 NEXTSTEP(tm) GUI.
 
+%description -l pl
+Temat NEXTSTEP(tm) dla GTK. Emuluje wygl±d graficznego interfejsu
+NEXTSTEP(tm).
+
 %prep
-%setup
+%setup -q
+
 %build
-CFLAGS="$RPM_OPT_FLAGS" ./configure --prefix=/usr
+export LDFLAGS="-s"
+%configure
 make
 
 %install
 rm -rf $RPM_BUILD_ROOT
-make prefix=$RPM_BUILD_ROOT/usr install
+make install DESTDIR=$RPM_BUILD_ROOT
+
+strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/gtk/themes/engines/lib*.so.*.*
+
+gzip -9nf AUTHORS ChangeLog NEWS README
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
-%attr(0644,root,root) /usr/lib/gtk/themes/engines/libstep.la
-%attr(0644,root,root) /usr/lib/gtk/themes/engines/libstep.so
-%attr(0644,root,root) /usr/lib/gtk/themes/engines/libstep.so.0
-%attr(0644,root,root) /usr/lib/gtk/themes/engines/libstep.so.0.0.0
-%attr(-,root,root) /usr/share/themes/Step/ICON.png
-%attr(-,root,root) /usr/share/themes/Step/README.html
-%attr(-,root,root) /usr/share/themes/Step/gtk/gtkrc
-%doc AUTHORS COPYING ChangeLog NEWS README
+%defattr(644,root,root,755)
+%doc {AUTHORS,ChangeLog,NEWS,README}.gz
+%attr(755,root,root) %{_libdir}/gtk/themes/engines/lib*.so.*.*
+%{_libdir}/gtk/themes/engines/lib*.so
+%{_libdir}/gtk/themes/engines/lib*.so.0
+%{_libdir}/gtk/themes/engines/lib*.la
+
+%{_datadir}/themes/Step
