@@ -1,5 +1,5 @@
-Summary:	A NEXTSTEP(tm) theme for GTK.
-Summary(pl):	Temat NEXTSTEP(tm) dla GTK.
+Summary:	A NEXTSTEP(tm) theme for GTK
+Summary(pl):	Temat NEXTSTEP(tm) dla GTK
 Name:		gtkstep
 Version:	2.0
 Release:	1
