@@ -10,7 +10,6 @@ Source0:	http://ulli.linuxave.net/gtkstep/%{name}-%{version}.tar.bz2
 Icon:		gtkstep.xpm
 URL:		http://ulli.linuxave.net/gtkstep/
 BuildRequires:	gtk+-devel >= 1.1.6
-BuildRequires:	glib-devel >= 1.1.6
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
