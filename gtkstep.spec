@@ -1,7 +1,7 @@
 Summary:	A NEXTSTEP(tm) theme for GTK.
 Summary(pl):	Temat NEXTSTEP(tm) dla GTK.
 Name:		gtkstep
-Version:	1.6
+Version:	1.7
 Release:	1
 Copyright:	GPL
 Group:          X11/Libraries
@@ -34,7 +34,7 @@ make
 rm -rf $RPM_BUILD_ROOT
 make install DESTDIR=$RPM_BUILD_ROOT
 
-strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/gtk/themes/engines/lib*.so.*.*
+strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/gtk/themes/engines/lib*.so
 
 gzip -9nf AUTHORS ChangeLog NEWS README
 
@@ -44,9 +44,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc {AUTHORS,ChangeLog,NEWS,README}.gz
-%attr(755,root,root) %{_libdir}/gtk/themes/engines/lib*.so.*.*
-%{_libdir}/gtk/themes/engines/lib*.so
-%{_libdir}/gtk/themes/engines/lib*.so.0
-%{_libdir}/gtk/themes/engines/lib*.la
+%attr(755,root,root) %{_libdir}/gtk/themes/engines/lib*.so
+%attr(755,root,root) %{_libdir}/gtk/themes/engines/lib*.la
 
 %{_datadir}/themes/Step
