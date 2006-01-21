@@ -8,7 +8,6 @@ Group:		X11/Libraries
 #Source0:	http://ulli.linuxave.net/gtkstep/%{name}-%{version}.tar.bz2
 Source0:	%{name}-%{version}.tar.bz2
 # Source0-md5:	a7c015ae759eee918799c058e241cc8a
-Icon:		gtkstep.xpm
 #URL:		http://ulli.linuxave.net/gtkstep/
 BuildRequires:	autoconf
 BuildRequires:	automake
