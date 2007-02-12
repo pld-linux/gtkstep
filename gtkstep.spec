@@ -1,5 +1,5 @@
 Summary:	A NEXTSTEP(tm) theme for GTK
-Summary(pl):	Motyw NEXTSTEP(tm) dla GTK
+Summary(pl.UTF-8):   Motyw NEXTSTEP(tm) dla GTK
 Name:		gtkstep
 Version:	2.2
 Release:	2
@@ -20,8 +20,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 A NEXTSTEP(tm) theme for GTK. It emulates the look and feel of the
 NEXTSTEP(tm) GUI.
 
-%description -l pl
-Motyw NEXTSTEP(tm) dla GTK. Emuluje wygl±d graficznego interfejsu
+%description -l pl.UTF-8
+Motyw NEXTSTEP(tm) dla GTK. Emuluje wyglÄ…d graficznego interfejsu
 NEXTSTEP(tm).
 
 %prep
