@@ -1,5 +1,5 @@
 Summary:	A NEXTSTEP(tm) theme for GTK
-Summary(pl.UTF-8):   Motyw NEXTSTEP(tm) dla GTK
+Summary(pl.UTF-8):	Motyw NEXTSTEP(tm) dla GTK
 Name:		gtkstep
 Version:	2.2
 Release:	2
